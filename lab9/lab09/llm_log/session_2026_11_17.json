@@ -1,0 +1,30 @@
+[
+  {
+    "session_id": "LOG-2026-11-17-01",
+    "timestamp": "2026-11-17T10:15:00+02:00",
+    "model": "gemini-2.5-pro",
+    "parameters": {
+      "temperature": 0.0,
+      "seed": 42,
+      "top_p": 0.95
+    },
+    "prompt_version": "v1.1-schema-design",
+    "prompt_summary": "Запропонуй схему LPG у Neo4j (мітки, типи зв'язків, властивості походження) на основі RDFS/OWL онтології skm: з ЛР №8 для 10 компетентнісних питань.",
+    "raw_output_summary": "Запропоновано 10 міток вузлів, 10 типів зв'язків та атрибути ребер source, confidence, validFrom. Для сесій запропоновано мульти-мітку :TrainingSession:SpeedStrengthSession.",
+    "human_decision": "Прийнято після перевірки покриття CQ1–CQ10; виправлено напрямок зв'язку PERFORMS_SESSION на (:Athlete)->(:TrainingSession)."
+  },
+  {
+    "session_id": "LOG-2026-11-17-02",
+    "timestamp": "2026-11-17T12:40:00+02:00",
+    "model": "gemini-2.5-pro",
+    "parameters": {
+      "temperature": 0.0,
+      "seed": 42,
+      "top_p": 0.95
+    },
+    "prompt_version": "v2.0-text-to-cypher",
+    "prompt_summary": "Перетвори 12 природномовних питань українською мовою на запити Cypher 5 із використанням наданої схеми графа та обов'язковим LIMIT 25.",
+    "raw_output_summary": "Згенеровано 12 запитів Cypher. 9 запитів виконано без помилок (EX=75.0%), у 3 запитах виявлено помилки E1 (інверсія ребра), E2 (префікс skm:), E3 (count у WHERE без WITH).",
+    "human_decision": "9 коректних запитів верифіковано (V4); 3 помилкові генерації задокументовано в аналізі помилок і відхилено у таблиці тверджень (CL-06, CL-08)."
+  }
+]
