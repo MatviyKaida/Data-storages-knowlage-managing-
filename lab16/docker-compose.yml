@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  neo4j:
+    image: neo4j:5.20-community
+    ports: ["7474:7474", "7687:7687"]
+    environment:
+      NEO4J_AUTH: "${NEO4J_USER:-neo4j}/${NEO4J_PASSWORD:-changeme_local}"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:7474 || exit 1"]
+      interval: 10s
+      retries: 5
+
+  hub-api:
+    build: .
+    ports: ["8000:8000"]
+    env_file: [.env.example]
+    depends_on:
+      - neo4j
+    command: ["uvicorn", "app.api:app", "--host", "0.0.0.0", "--port", "8000"]
+    healthcheck:
+      test: ["CMD-SHELL", "python3 -c 'import urllib.request; urllib.request.urlopen("http://localhost:8000/health")'"]
+      interval: 10s
+      retries: 3

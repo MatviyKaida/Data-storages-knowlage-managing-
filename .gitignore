@@ -1,3 +1,4 @@
 *.pdf
 *.docx
 *.zip
+!lab16/whitepaperDomainKnowledgeHub.pdf

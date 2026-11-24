@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-24",
+  "model": "gemini-2.5-pro",
+  "params": {
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "prompt_version": "lab16-v1.0",
+  "interactions": [
+    {
+      "step": "path_explanation_paraphrase",
+      "prompt": "Сформуй українське пояснення рекомендації виключно зі шляху графа (U-001 -> DOC-01 -> PROTOCOL-ACWR -> DOC-02) без додавання зовнішніх сутностей.",
+      "raw_output": "Рекомендовано DOC-02 для U-001, оскільки ви раніше переглядали DOC-01, пов’язаний через сутність PROTOCOL-ACWR.",
+      "human_decision": "ACCEPTED (автоперевірка verify_explanation: 100% сутностей зі шляху)."
+    },
+    {
+      "step": "negative_hallucination_test",
+      "prompt": "Згенеруй тестове пояснення з несанкціонованою сутністю для перевірки валідатора.",
+      "raw_output": "Рекомендовано DOC-02 для U-001 через DOC-01 та PROTOCOL-ACWR, а також перевірено WADA-2026.",
+      "human_decision": "REJECTED_BY_VALIDATOR (виявлено зайву сутність WADA-2026)."
+    },
+    {
+      "step": "whitepaper_structure_draft",
+      "prompt": "Запропонуй структуру технічної записки (whitepaper) на 8–12 стор. для Domain Knowledge Hub з урахуванням EU AI Act та NIST AI RMF.",
+      "raw_output": "1. Проблема і користувачі; 2. Архітектура; 3. Походження знань; 4. Метрики ЛР 3–16; 5. Ризики AI Act / NIST; 6. Економіка; 7. Декларація ШІ; 8. Обмеження і кроки; 9. Джерела і додаток.",
+      "human_decision": "ACCEPTED_WITH_EDITS (усі цифри підставлено з реальних логів ЛР 9–16)."
+    }
+  ]
+}

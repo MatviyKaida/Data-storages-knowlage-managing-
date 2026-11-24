@@ -1,0 +1,356 @@
+{
+  "dataset": {
+    "n_users": 60,
+    "warm_users": 48,
+    "cold_users": 12,
+    "n_items": 34,
+    "cold_items": 4,
+    "n_train": 401,
+    "n_test": 206,
+    "split_boundary": "2026-10-26"
+  },
+  "filter_demo": {
+    "total_catalog": 34,
+    "guest": {
+      "kept": 4,
+      "removed": {
+        "unverified": 4,
+        "stale": 2,
+        "rbac": 24
+      }
+    },
+    "coach": {
+      "kept": 25,
+      "removed": {
+        "unverified": 4,
+        "stale": 2,
+        "rbac": 3
+      }
+    },
+    "doctor": {
+      "kept": 28,
+      "removed": {
+        "unverified": 4,
+        "stale": 2,
+        "rbac": 0
+      }
+    }
+  },
+  "offline_eval": {
+    "popularity": {
+      "precision@5": 0.2333,
+      "p5_ci": [
+        0.1867,
+        0.2833
+      ],
+      "recall@5": 0.3525,
+      "r5_ci": [
+        0.2811,
+        0.4261
+      ],
+      "nDCG@10": 0.3628,
+      "ndcg_ci": [
+        0.3031,
+        0.4296
+      ],
+      "coverage": 0.4286,
+      "novelty": 4.2561,
+      "nov_ci": [
+        4.1728,
+        4.3602
+      ],
+      "n_users": 60
+    },
+    "graph": {
+      "precision@5": 0.3233,
+      "p5_ci": [
+        0.2733,
+        0.3667
+      ],
+      "recall@5": 0.4925,
+      "r5_ci": [
+        0.4141,
+        0.5675
+      ],
+      "nDCG@10": 0.5716,
+      "ndcg_ci": [
+        0.5119,
+        0.6311
+      ],
+      "coverage": 1.0,
+      "novelty": 5.3276,
+      "nov_ci": [
+        5.2552,
+        5.4047
+      ],
+      "n_users": 60
+    },
+    "embeddings": {
+      "precision@5": 0.2933,
+      "p5_ci": [
+        0.24,
+        0.3467
+      ],
+      "recall@5": 0.4403,
+      "r5_ci": [
+        0.3653,
+        0.517
+      ],
+      "nDCG@10": 0.5094,
+      "ndcg_ci": [
+        0.4479,
+        0.5727
+      ],
+      "coverage": 1.0,
+      "novelty": 5.2704,
+      "nov_ci": [
+        5.1854,
+        5.3587
+      ],
+      "n_users": 60
+    },
+    "hybrid_weighted": {
+      "precision@5": 0.32,
+      "p5_ci": [
+        0.2733,
+        0.37
+      ],
+      "recall@5": 0.4811,
+      "r5_ci": [
+        0.4019,
+        0.5595
+      ],
+      "nDCG@10": 0.566,
+      "ndcg_ci": [
+        0.5035,
+        0.6279
+      ],
+      "coverage": 1.0,
+      "novelty": 5.2954,
+      "nov_ci": [
+        5.2237,
+        5.3677
+      ],
+      "n_users": 60
+    },
+    "hybrid_rrf": {
+      "precision@5": 0.3033,
+      "p5_ci": [
+        0.2567,
+        0.3533
+      ],
+      "recall@5": 0.4592,
+      "r5_ci": [
+        0.3847,
+        0.5306
+      ],
+      "nDCG@10": 0.5637,
+      "ndcg_ci": [
+        0.4965,
+        0.623
+      ],
+      "coverage": 1.0,
+      "novelty": 5.2423,
+      "nov_ci": [
+        5.1673,
+        5.3172
+      ],
+      "n_users": 60
+    }
+  },
+  "temporal_folds_ndcg10": {
+    "popularity": [
+      0.3161,
+      0.3852,
+      0.3758
+    ],
+    "graph": [
+      0.4134,
+      0.5053,
+      0.5607
+    ],
+    "embeddings": [
+      0.3875,
+      0.3884,
+      0.4819
+    ],
+    "hybrid_weighted": [
+      0.4312,
+      0.4674,
+      0.5365
+    ],
+    "hybrid_rrf": [
+      0.4356,
+      0.491,
+      0.5413
+    ]
+  },
+  "explainability": {
+    "total_checked": 294,
+    "grounded_count": 294,
+    "grounded_rate": 1.0,
+    "negative_hallucination_caught": true,
+    "examples": [
+      {
+        "user_id": "U-001",
+        "item_id": "DOC-12",
+        "title": "Пороги креатинкінази (КФК > 500 Од/л) для ротації складу",
+        "path": "U-001 -> DOC-12 -> TAG-BIOCHEM-2 -> DOC-12",
+        "explanation": "Рекомендовано DOC-12 для U-001, оскільки ви раніше переглядали DOC-12, пов’язаний через сутність TAG-BIOCHEM-2.",
+        "grounded": true
+      },
+      {
+        "user_id": "U-001",
+        "item_id": "DOC-07",
+        "title": "Інтерпретація зниження rMSSD > 15% від базової лінії",
+        "path": "U-001 -> DOC-07 -> TAG-HRV-2 -> DOC-07",
+        "explanation": "Рекомендовано DOC-07 для U-001, оскільки ви раніше переглядали DOC-07, пов’язаний через сутність TAG-HRV-2.",
+        "grounded": true
+      },
+      {
+        "user_id": "U-001",
+        "item_id": "DOC-NEW-03",
+        "title": "Ранковий скринінг HRV + КФК після подвійних тижнів",
+        "path": "U-001 -> DOC-08 -> PROTOCOL-HRV -> DOC-NEW-03",
+        "explanation": "Рекомендовано DOC-NEW-03 для U-001, оскільки ви раніше переглядали DOC-08, пов’язаний через сутність PROTOCOL-HRV.",
+        "grounded": true
+      },
+      {
+        "user_id": "U-001",
+        "item_id": "DOC-29",
+        "title": "Аудит спортивного харчування на забруднення (NSF/Informed)",
+        "path": "U-001 -> DOC-29 -> TAG-WADA-4 -> DOC-29",
+        "explanation": "Рекомендовано DOC-29 для U-001, оскільки ви раніше переглядали DOC-29, пов’язаний через сутність TAG-WADA-4.",
+        "grounded": true
+      },
+      {
+        "user_id": "U-001",
+        "item_id": "DOC-28",
+        "title": "Конфіденційні медичні картки допуску атлетів (restricted)",
+        "path": "U-001 -> DOC-28 -> WADA-2026 -> DOC-28",
+        "explanation": "Рекомендовано DOC-28 для U-001, оскільки ви раніше переглядали DOC-28, пов’язаний через сутність WADA-2026.",
+        "grounded": true
+      }
+    ]
+  },
+  "cold_start_new_user": {
+    "popularity": {
+      "precision@5": 0.1833,
+      "p5_ci": [
+        0.1167,
+        0.25
+      ],
+      "recall@5": 0.3111,
+      "r5_ci": [
+        0.1805,
+        0.4778
+      ],
+      "nDCG@10": 0.311,
+      "ndcg_ci": [
+        0.2084,
+        0.4212
+      ],
+      "coverage": 0.4286,
+      "novelty": 4.2353,
+      "nov_ci": [
+        4.1312,
+        4.4435
+      ],
+      "n_users": 12
+    },
+    "graph": {
+      "precision@5": 0.3333,
+      "p5_ci": [
+        0.2333,
+        0.4333
+      ],
+      "recall@5": 0.5069,
+      "r5_ci": [
+        0.3514,
+        0.6584
+      ],
+      "nDCG@10": 0.6152,
+      "ndcg_ci": [
+        0.5306,
+        0.7017
+      ],
+      "coverage": 1.0,
+      "novelty": 5.3431,
+      "nov_ci": [
+        5.1912,
+        5.4953
+      ],
+      "n_users": 12
+    },
+    "embeddings": {
+      "precision@5": 0.3333,
+      "p5_ci": [
+        0.25,
+        0.4167
+      ],
+      "recall@5": 0.5069,
+      "r5_ci": [
+        0.3777,
+        0.6528
+      ],
+      "nDCG@10": 0.6196,
+      "ndcg_ci": [
+        0.5174,
+        0.7265
+      ],
+      "coverage": 1.0,
+      "novelty": 5.3642,
+      "nov_ci": [
+        5.2029,
+        5.523
+      ],
+      "n_users": 12
+    },
+    "hybrid_rrf": {
+      "precision@5": 0.3333,
+      "p5_ci": [
+        0.2333,
+        0.4167
+      ],
+      "recall@5": 0.5069,
+      "r5_ci": [
+        0.375,
+        0.6472
+      ],
+      "nDCG@10": 0.6533,
+      "ndcg_ci": [
+        0.5304,
+        0.7779
+      ],
+      "coverage": 1.0,
+      "novelty": 5.3696,
+      "nov_ci": [
+        5.2263,
+        5.52
+      ],
+      "n_users": 12
+    }
+  },
+  "cold_start_new_item": {
+    "popularity": {
+      "cold_item_recall@10": 0.0513,
+      "cold_items_exposed": 1,
+      "total_cold_items": 4
+    },
+    "graph": {
+      "cold_item_recall@10": 0.7692,
+      "cold_items_exposed": 4,
+      "total_cold_items": 4
+    },
+    "embeddings": {
+      "cold_item_recall@10": 0.6923,
+      "cold_items_exposed": 4,
+      "total_cold_items": 4
+    },
+    "hybrid_rrf": {
+      "cold_item_recall@10": 0.7179,
+      "cold_items_exposed": 4,
+      "total_cold_items": 4
+    }
+  }
+}
