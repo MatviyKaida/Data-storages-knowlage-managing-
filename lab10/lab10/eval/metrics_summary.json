@@ -1,0 +1,139 @@
+{
+  "corpus": {
+    "docs": 24,
+    "chunks": 216,
+    "noise_removed": 48,
+    "sensitivity": {
+      "public": 108,
+      "restricted": 54,
+      "internal": 54
+    }
+  },
+  "chunking": {
+    "fixed_overlap (240/60)": {
+      "chunks": 134,
+      "avg_chars": 218.4,
+      "recall@5": 1.0
+    },
+    "header_structure": {
+      "chunks": 72,
+      "avg_chars": 356.3,
+      "recall@5": 1.0
+    },
+    "semantic_hierarchical": {
+      "chunks": 216,
+      "avg_chars": 271.5,
+      "recall@5": 1.0
+    }
+  },
+  "embeddings": {
+    "Model A: Word-Bigram SVD-128 (e5-style)": {
+      "dim": 128,
+      "M": 16,
+      "efSearch": 32,
+      "build_ms": 121.26,
+      "avg_query_ms": 0.132,
+      "recall@5_20q": 0.95
+    },
+    "Model B: Char-Ngram SVD-128 (MiniLM-morph)": {
+      "dim": 128,
+      "M": 16,
+      "efSearch": 32,
+      "build_ms": 205.39,
+      "avg_query_ms": 0.168,
+      "recall@5_20q": 1.0
+    }
+  },
+  "upsert_delete": {
+    "before_active": 216,
+    "deleted_docs": [
+      "DOC-20",
+      "DOC-21"
+    ],
+    "deleted_chunks": 18,
+    "after_delete": 198,
+    "updated_docs": [
+      "DOC-01",
+      "DOC-02"
+    ],
+    "inserted_doc": "DOC-25 (CH-NEW-001)",
+    "after_upsert": 199,
+    "new_doc_top1_match": "CH-NEW-001"
+  },
+  "eval_4_configs": {
+    "BM25": {
+      "recall@5": 0.944,
+      "recall@10": 0.972,
+      "mrr": 0.929,
+      "ndcg@10": 0.655,
+      "avg_latency_ms": 0.131
+    },
+    "Dense": {
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.918,
+      "ndcg@10": 0.714,
+      "avg_latency_ms": 0.153
+    },
+    "Hybrid (RRF k=60)": {
+      "recall@5": 0.972,
+      "recall@10": 0.972,
+      "mrr": 0.958,
+      "ndcg@10": 0.712,
+      "avg_latency_ms": 0.363
+    },
+    "Hybrid + Rerank": {
+      "recall@5": 0.972,
+      "recall@10": 0.972,
+      "mrr": 0.924,
+      "ndcg@10": 0.713,
+      "avg_latency_ms": 2.588
+    }
+  },
+  "rerank_changes": 36,
+  "prefilter": {
+    "public_top3": [
+      "DOC-20",
+      "DOC-20",
+      "DOC-08"
+    ],
+    "restricted_med_top3": [
+      "DOC-10",
+      "DOC-10",
+      "DOC-10"
+    ]
+  },
+  "kappa": {
+    "queries": 12,
+    "pairs": 24,
+    "po": 0.917,
+    "pe": 0.5,
+    "kappa": 0.833
+  },
+  "unanswerable_scores": [
+    [
+      "G-37",
+      0.373
+    ],
+    [
+      "G-38",
+      0.617
+    ],
+    [
+      "G-39",
+      0.403
+    ],
+    [
+      "G-40",
+      0.399
+    ],
+    [
+      "G-41",
+      0.313
+    ],
+    [
+      "G-42",
+      0.419
+    ]
+  ]
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "session_id": "LLM-LAB10-01",
+    "timestamp": "2026-11-24T18:10:00+02:00",
+    "model": "gemini-2.5-pro",
+    "parameters": {
+      "temperature": 0.2,
+      "seed": 42,
+      "top_p": 0.95
+    },
+    "prompt_version": "v1.0-synthetic-queries",
+    "prompt_summary": "Згенеруй 45 кандидатів пошукових запитів (ключові слова, перефразування, багатокрокові та без відповіді) до 24 документів корпусу спортивних знань.",
+    "raw_output_summary": "Отримано 45 кандидатів запитів; 3 кандидати містили надто загальне формулювання або дублювали існуючі.",
+    "human_decision": "Верифікація V3: 42 запити переглянуто, відредаговано вручну та включено до eval/gold.jsonl (6 без відповіді); 3 дублікати відхилено."
+  },
+  {
+    "session_id": "LLM-LAB10-02",
+    "timestamp": "2026-11-24T19:05:00+02:00",
+    "model": "gemini-2.5-pro",
+    "parameters": {
+      "temperature": 0.0,
+      "seed": 42,
+      "top_p": 0.95
+    },
+    "prompt_version": "v1.1-rag-config-review",
+    "prompt_summary": "Оціни компроміс між BM25, Dense, Hybrid (RRF k=60) та Hybrid+Rerank за метриками Recall@5, MRR, nDCG@10 і затримкою.",
+    "raw_output_summary": "Запропоновано обрати Hybrid (RRF k=60) як базовий ретривер для ЛР №11 та перевірити поріг відсікання для unanswerable запитів.",
+    "human_decision": "Підтверджено метриками V4 на eval/gold.jsonl (MRR=0.958, latency=0.363 мс, поріг cosine < 0.65)."
+  }
+]
