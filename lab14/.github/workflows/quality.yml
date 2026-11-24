@@ -1,0 +1,21 @@
+name: Knowledge Hub Quality Gate
+on:
+  push:
+    branches: [main, lab14]
+  pull_request:
+    branches: [main]
+
+jobs:
+  quality-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run SHACL, Graph Invariants, JSON Schema & pytest gate
+        run: |
+          pytest quality/tests/ -v
+          python3 quality/ci_gate.py

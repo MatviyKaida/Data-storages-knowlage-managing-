@@ -1,0 +1,101 @@
+pair_id,split,name_a,type_a,name_b,type_b,score,is_duplicate
+P-001,dev,Коваленко О.І.,Athlete,Коваленко О. І.,Athlete,0.9023,1
+P-002,dev,Бондаренко Д.С.,Athlete,Бондаренко Д. С.,Athlete,0.9095,1
+P-003,dev,Мельник В.П.,Coach,Мельник В. П.,Coach,0.8837,1
+P-004,dev,Савчук І.Р.,SportsDoctor,Савчук І. Р.,SportsDoctor,0.8715,1
+P-005,dev,Catapult Vector S7 #01,BiometricSensor,Catapult Vector S7 01,BiometricSensor,1.0,1
+P-006,dev,Протокол FIFA Medical RTP — Фаза 2,ReturnToPlayProtocol,FIFA Medical RTP Фаза 2,ReturnToPlayProtocol,0.8655,1
+P-007,dev,Креатинкіназа (КФК),Biomarker,Креатинкіназа КФК,Biomarker,1.0,1
+P-008,dev,Індекс симетрії кінцівок LSI,Biomarker,Індекс симетрії LSI,Biomarker,0.826,1
+P-009,dev,Мікроцикл тижня W42,TrainingMicrocycle,Мікроцикл W42,TrainingMicrocycle,0.821,1
+P-010,dev,Тендинопатія ахіллового сухожилля,SportsInjury,Тендинопатія ахіллова сухожилля,SportsInjury,0.922,1
+P-011,dev,Polar H10 ECG Sensor,BiometricSensor,Polar H10 Sensor,BiometricSensor,0.8854,1
+P-012,dev,Коваленко О.І. v2,Athlete,Коваленко О. І. v2,Athlete,0.9211,1
+P-013,dev,Бондаренко Д.С. v2,Athlete,Бондаренко Д. С. v2,Athlete,0.9259,1
+P-014,dev,Мельник В.П. v2,Coach,Мельник В. П. v2,Coach,0.9095,1
+P-015,dev,Савчук І.Р. v2,SportsDoctor,Савчук І. Р. v2,SportsDoctor,0.9023,1
+P-016,dev,Catapult Vector S7 #01 v2,BiometricSensor,Catapult Vector S7 01 v2,BiometricSensor,1.0,1
+P-017,dev,Протокол FIFA Medical RTP — Фаза 2 v2,ReturnToPlayProtocol,FIFA Medical RTP Фаза 2 v2,ReturnToPlayProtocol,0.8784,1
+P-018,dev,Креатинкіназа (КФК) v2,Biomarker,Креатинкіназа КФК v2,Biomarker,1.0,1
+P-019,dev,Індекс симетрії кінцівок LSI v2,Biomarker,Індекс симетрії LSI v2,Biomarker,0.8452,1
+P-020,dev,Мікроцикл тижня W42 v2,TrainingMicrocycle,Мікроцикл W42 v2,TrainingMicrocycle,0.8487,1
+P-021,dev,Тендинопатія ахіллового сухожилля v2,SportsInjury,Тендинопатія ахіллова сухожилля v2,SportsInjury,0.9287,1
+P-022,dev,Polar H10 ECG Sensor v2,BiometricSensor,Polar H10 Sensor v2,BiometricSensor,0.9016,1
+P-023,dev,Коваленко О.І.,Athlete,Коваль О.В.,SportsDoctor,0.454,0
+P-024,dev,Кравчук С.О.,Coach,Ковальчук А.С.,Athlete,0.3594,0
+P-025,dev,Мікроцикл тижня W42,TrainingMicrocycle,Мікроцикл тижня W38,TrainingMicrocycle,0.8895,0
+P-026,dev,Catapult Vector S7 #01,BiometricSensor,Catapult Vector S7 #14,BiometricSensor,0.9214,0
+P-027,dev,Протокол RTP-FIFA-H2,ReturnToPlayProtocol,Протокол RTP-ACL-P1,ReturnToPlayProtocol,0.7424,0
+P-028,dev,Розтягнення біцепса стегна HM2,SportsInjury,Перевантаження квадрицепса TM1,SportsInjury,0.4533,0
+P-029,dev,Лабораторний тест LAB-2026-089,LabTest,Лабораторний тест LAB-2026-096,LabTest,0.945,0
+P-030,dev,Телеметрія AMS REC-98412,LoadRecoveryMetric,Телеметрія AMS REC-98445,LoadRecoveryMetric,0.9125,0
+P-031,dev,Аеробне відновлення Z1,TrainingSession,Швидкісно-силова сесія,TrainingSession,0.2932,0
+P-032,dev,Гриценко Н.П.,SportsDoctor,Гнатюк Р.О.,Athlete,0.135,0
+P-033,dev,Лисенко І.О.,Athlete,Литвин М.С.,Coach,0.1843,0
+P-034,dev,GymAware Linear Encoder,BiometricSensor,Cosmed K5 Gas Analyzer,BiometricSensor,0.2678,0
+P-035,dev,Протокол WADA ABP,Protocol,Протокол FIFA 11+,Protocol,0.644,0
+P-036,dev,Індекс ACWR,Biomarker,Індекс TRIMP,Biomarker,0.6719,0
+P-037,dev,Коваленко О.І. #14,Athlete,Коваль О.В. #14,SportsDoctor,0.5122,0
+P-038,dev,Кравчук С.О. #15,Coach,Ковальчук А.С. #15,Athlete,0.436,0
+P-039,dev,Мікроцикл тижня W42 #16,TrainingMicrocycle,Мікроцикл тижня W38 #16,TrainingMicrocycle,0.8864,0
+P-040,dev,Catapult Vector S7 #01 #17,BiometricSensor,Catapult Vector S7 #14 #17,BiometricSensor,0.9146,0
+P-041,dev,Протокол RTP-FIFA-H2 #18,ReturnToPlayProtocol,Протокол RTP-ACL-P1 #18,ReturnToPlayProtocol,0.759,0
+P-042,dev,Розтягнення біцепса стегна HM2 #19,SportsInjury,Перевантаження квадрицепса TM1 #19,SportsInjury,0.4909,0
+P-043,dev,Лабораторний тест LAB-2026-089 #20,LabTest,Лабораторний тест LAB-2026-096 #20,LabTest,0.9379,0
+P-044,dev,Телеметрія AMS REC-98412 #21,LoadRecoveryMetric,Телеметрія AMS REC-98445 #21,LoadRecoveryMetric,0.9074,0
+P-045,dev,Аеробне відновлення Z1 #22,TrainingSession,Швидкісно-силова сесія #22,TrainingSession,0.362,0
+P-046,dev,Гриценко Н.П. #23,SportsDoctor,Гнатюк Р.О. #23,Athlete,0.2694,0
+P-047,dev,Лисенко І.О. #24,Athlete,Литвин М.С. #24,Coach,0.3121,0
+P-048,dev,GymAware Linear Encoder #25,BiometricSensor,Cosmed K5 Gas Analyzer #25,BiometricSensor,0.3539,0
+P-049,dev,Протокол WADA ABP #26,Protocol,Протокол FIFA 11+ #26,Protocol,0.6783,0
+P-050,dev,Індекс ACWR #27,Biomarker,Індекс TRIMP #27,Biomarker,0.7122,0
+P-051,test,Коваленко О.І.,Athlete,Коваленко О. І.,Athlete,0.9023,1
+P-052,test,Бондаренко Д.С.,Athlete,Бондаренко Д. С.,Athlete,0.9095,1
+P-053,test,Мельник В.П.,Coach,Мельник В. П.,Coach,0.8837,1
+P-054,test,Савчук І.Р.,SportsDoctor,Савчук І. Р.,SportsDoctor,0.8715,1
+P-055,test,Catapult Vector S7 #01,BiometricSensor,Catapult Vector S7 01,BiometricSensor,1.0,1
+P-056,test,Протокол FIFA Medical RTP — Фаза 2,ReturnToPlayProtocol,FIFA Medical RTP Фаза 2,ReturnToPlayProtocol,0.8655,1
+P-057,test,Креатинкіназа (КФК),Biomarker,Креатинкіназа КФК,Biomarker,1.0,1
+P-058,test,Індекс симетрії кінцівок LSI,Biomarker,Індекс симетрії LSI,Biomarker,0.826,1
+P-059,test,Мікроцикл тижня W42,TrainingMicrocycle,Мікроцикл W42,TrainingMicrocycle,0.821,1
+P-060,test,Тендинопатія ахіллового сухожилля,SportsInjury,Тендинопатія ахіллова сухожилля,SportsInjury,0.922,1
+P-061,test,Polar H10 ECG Sensor,BiometricSensor,Polar H10 Sensor,BiometricSensor,0.8854,1
+P-062,test,Коваленко О.І. v2,Athlete,Коваленко О. І. v2,Athlete,0.9211,1
+P-063,test,Бондаренко Д.С. v2,Athlete,Бондаренко Д. С. v2,Athlete,0.9259,1
+P-064,test,Мельник В.П. v2,Coach,Мельник В. П. v2,Coach,0.9095,1
+P-065,test,Савчук І.Р. v2,SportsDoctor,Савчук І. Р. v2,SportsDoctor,0.9023,1
+P-066,test,Catapult Vector S7 #01 v2,BiometricSensor,Catapult Vector S7 01 v2,BiometricSensor,1.0,1
+P-067,test,Протокол FIFA Medical RTP — Фаза 2 v2,ReturnToPlayProtocol,FIFA Medical RTP Фаза 2 v2,ReturnToPlayProtocol,0.8784,1
+P-068,test,Креатинкіназа (КФК) v2,Biomarker,Креатинкіназа КФК v2,Biomarker,1.0,1
+P-069,test,Індекс симетрії кінцівок LSI v2,Biomarker,Індекс симетрії LSI v2,Biomarker,0.8452,1
+P-070,test,Мікроцикл тижня W42 v2,TrainingMicrocycle,Мікроцикл W42 v2,TrainingMicrocycle,0.8487,1
+P-071,test,Тендинопатія ахіллового сухожилля v2,SportsInjury,Тендинопатія ахіллова сухожилля v2,SportsInjury,0.9287,1
+P-072,test,Polar H10 ECG Sensor v2,BiometricSensor,Polar H10 Sensor v2,BiometricSensor,0.9016,1
+P-073,test,Коваленко О.І.,Athlete,Коваль О.В.,SportsDoctor,0.454,0
+P-074,test,Кравчук С.О.,Coach,Ковальчук А.С.,Athlete,0.3594,0
+P-075,test,Мікроцикл тижня W42,TrainingMicrocycle,Мікроцикл тижня W38,TrainingMicrocycle,0.8895,0
+P-076,test,Catapult Vector S7 #01,BiometricSensor,Catapult Vector S7 #14,BiometricSensor,0.9214,0
+P-077,test,Протокол RTP-FIFA-H2,ReturnToPlayProtocol,Протокол RTP-ACL-P1,ReturnToPlayProtocol,0.7424,0
+P-078,test,Розтягнення біцепса стегна HM2,SportsInjury,Перевантаження квадрицепса TM1,SportsInjury,0.4533,0
+P-079,test,Лабораторний тест LAB-2026-089,LabTest,Лабораторний тест LAB-2026-096,LabTest,0.945,0
+P-080,test,Телеметрія AMS REC-98412,LoadRecoveryMetric,Телеметрія AMS REC-98445,LoadRecoveryMetric,0.9125,0
+P-081,test,Аеробне відновлення Z1,TrainingSession,Швидкісно-силова сесія,TrainingSession,0.2932,0
+P-082,test,Гриценко Н.П.,SportsDoctor,Гнатюк Р.О.,Athlete,0.135,0
+P-083,test,Лисенко І.О.,Athlete,Литвин М.С.,Coach,0.1843,0
+P-084,test,GymAware Linear Encoder,BiometricSensor,Cosmed K5 Gas Analyzer,BiometricSensor,0.2678,0
+P-085,test,Протокол WADA ABP,Protocol,Протокол FIFA 11+,Protocol,0.644,0
+P-086,test,Індекс ACWR,Biomarker,Індекс TRIMP,Biomarker,0.6719,0
+P-087,test,Коваленко О.І. #14,Athlete,Коваль О.В. #14,SportsDoctor,0.5122,0
+P-088,test,Кравчук С.О. #15,Coach,Ковальчук А.С. #15,Athlete,0.436,0
+P-089,test,Мікроцикл тижня W42 #16,TrainingMicrocycle,Мікроцикл тижня W38 #16,TrainingMicrocycle,0.8864,0
+P-090,test,Catapult Vector S7 #01 #17,BiometricSensor,Catapult Vector S7 #14 #17,BiometricSensor,0.9146,0
+P-091,test,Протокол RTP-FIFA-H2 #18,ReturnToPlayProtocol,Протокол RTP-ACL-P1 #18,ReturnToPlayProtocol,0.759,0
+P-092,test,Розтягнення біцепса стегна HM2 #19,SportsInjury,Перевантаження квадрицепса TM1 #19,SportsInjury,0.4909,0
+P-093,test,Лабораторний тест LAB-2026-089 #20,LabTest,Лабораторний тест LAB-2026-096 #20,LabTest,0.9379,0
+P-094,test,Телеметрія AMS REC-98412 #21,LoadRecoveryMetric,Телеметрія AMS REC-98445 #21,LoadRecoveryMetric,0.9074,0
+P-095,test,Аеробне відновлення Z1 #22,TrainingSession,Швидкісно-силова сесія #22,TrainingSession,0.362,0
+P-096,test,Гриценко Н.П. #23,SportsDoctor,Гнатюк Р.О. #23,Athlete,0.2694,0
+P-097,test,Лисенко І.О. #24,Athlete,Литвин М.С. #24,Coach,0.3121,0
+P-098,test,GymAware Linear Encoder #25,BiometricSensor,Cosmed K5 Gas Analyzer #25,BiometricSensor,0.3539,0
+P-099,test,Протокол WADA ABP #26,Protocol,Протокол FIFA 11+ #26,Protocol,0.6783,0
+P-100,test,Індекс ACWR #27,Biomarker,Індекс TRIMP #27,Biomarker,0.7122,0

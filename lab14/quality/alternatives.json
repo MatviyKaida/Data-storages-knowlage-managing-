@@ -1,0 +1,68 @@
+[
+  {
+    "conflict_id": "CONF-01",
+    "topic": "Граничний поріг ACWR для блокування спринтів",
+    "selected_value": "1.30",
+    "strategy": "Довіра до рецензованого джерела (BJSM)",
+    "alternatives": [
+      {
+        "value": "1.30",
+        "source": "DOC-03 (BJSM Consensus)",
+        "confidence": 0.99,
+        "date": "2026-09-15",
+        "status": "canonical"
+      },
+      {
+        "value": "1.40",
+        "source": "DOC-18 (Внутрішня чернетка тренера)",
+        "confidence": 0.78,
+        "date": "2026-10-15",
+        "status": "archived_alternative"
+      }
+    ]
+  },
+  {
+    "conflict_id": "CONF-02",
+    "topic": "Поріг креатинкінази (КФК) для корекції тренувань",
+    "selected_value": "400 Од/л (тривога DSS) / 500 Од/л (відміна)",
+    "strategy": "Консенсус із розмежуванням рівнів ризику",
+    "alternatives": [
+      {
+        "value": "400 Од/л",
+        "source": "DOC-24 (DSS Rules)",
+        "confidence": 0.96,
+        "date": "2026-10-21",
+        "status": "warning_threshold"
+      },
+      {
+        "value": "500 Од/л",
+        "source": "DOC-04 (LNU Biochem Lab)",
+        "confidence": 0.99,
+        "date": "2026-09-18",
+        "status": "stop_threshold"
+      }
+    ]
+  },
+  {
+    "conflict_id": "CONF-03",
+    "topic": "Максимальна ЧСС на фазі 2 реабілітації",
+    "selected_value": "Залежить від типу травми (145 FIFA / 150 Tendon)",
+    "strategy": "Контекстне розведення за протоколом",
+    "alternatives": [
+      {
+        "value": "145 уд/хв",
+        "source": "DOC-10 (RTP-FIFA-H2)",
+        "confidence": 0.99,
+        "date": "2026-10-01",
+        "status": "hamstring_protocol"
+      },
+      {
+        "value": "150 уд/хв",
+        "source": "DOC-12 (RTP-TENDON-P2)",
+        "confidence": 0.97,
+        "date": "2026-10-05",
+        "status": "tendon_protocol"
+      }
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "version_baseline": "v1.0-baseline (2026-11-17)",
+  "version_after": "v1.1-cleaned (2026-11-24)",
+  "accuracy_sample_size": 36,
+  "dimensions": [
+    {
+      "dim": "Повнота (Completeness)",
+      "threshold": ">= 95%",
+      "baseline": 91.7,
+      "after": 100.0
+    },
+    {
+      "dim": "Узгодженість (Consistency)",
+      "threshold": ">= 95%",
+      "baseline": 93.2,
+      "after": 99.1
+    },
+    {
+      "dim": "Точність (Accuracy, n=36)",
+      "threshold": ">= 90%",
+      "baseline": 88.9,
+      "after": 97.2
+    },
+    {
+      "dim": "Актуальність (Timeliness)",
+      "threshold": ">= 90%",
+      "baseline": 94.5,
+      "after": 98.0
+    },
+    {
+      "dim": "Унікальність (Uniqueness)",
+      "threshold": ">= 98%",
+      "baseline": 95.8,
+      "after": 100.0
+    },
+    {
+      "dim": "Походження (Provenance)",
+      "threshold": "100%",
+      "baseline": 96.4,
+      "after": 100.0
+    },
+    {
+      "dim": "Валідність (SHACL/JSON)",
+      "threshold": "100%",
+      "baseline": 94.0,
+      "after": 100.0
+    },
+    {
+      "dim": "Доступність (RBAC/API)",
+      "threshold": "100%",
+      "baseline": 100.0,
+      "after": 100.0
+    }
+  ],
+  "dedup_test": {
+    "threshold_dev": 0.76,
+    "precision": 0.733,
+    "recall": 1.0,
+    "f1": 0.846
+  },
+  "rag_before_after": {
+    "faithfulness": {
+      "before": 0.906,
+      "after": 0.969
+    },
+    "context_recall": {
+      "before": 0.875,
+      "after": 0.938
+    },
+    "citation_accuracy": {
+      "before": 1.0,
+      "after": 1.0
+    },
+    "abstention_rate": {
+      "before": 0.917,
+      "after": 1.0
+    }
+  }
+}
