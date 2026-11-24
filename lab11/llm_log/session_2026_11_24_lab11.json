@@ -1,0 +1,28 @@
+[
+  {
+    "session_id": "LLM-LAB11-01",
+    "timestamp": "2026-11-24T20:10:00+02:00",
+    "model": "gemini-2.5-pro",
+    "parameters": {
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "prompt_version": "rag_v1.md",
+    "prompt_summary": "Розроби системний промпт RAG із правилами цитування [id], політикою 'не знаю', обробкою конфлікту джерел та захистом від prompt injection.",
+    "raw_output_summary": "Сформовано 5 жорстких правил для генератора відповідей.",
+    "human_decision": "Прийнято та верифіковано на 32 тестах eval/rag_eval.jsonl (citation_accuracy = 1.000)."
+  },
+  {
+    "session_id": "LLM-LAB11-02",
+    "timestamp": "2026-11-24T20:35:00+02:00",
+    "model": "gemini-2.5-flash (LLM-суддя)",
+    "parameters": {
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "prompt_version": "judge_v1.0",
+    "prompt_summary": "Оціни faithfulness 32 відповідей RAG-системи за бінарною рубрикою (1 = кожне твердження підкріплене цитатою або коректна відмова, 0 = галюцинація/пропуск).",
+    "raw_output_summary": "Оцінено 32 відповіді; на підмножині з 12 відповідей проведено незалежну перевірку людиною.",
+    "human_decision": "Верифікація V3: узгодженість судді з людиною Cohen's kappa = 0.750 (Po = 0.917)."
+  }
+]

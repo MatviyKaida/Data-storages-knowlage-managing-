@@ -1,0 +1,198 @@
+{
+  "graph_vs_text": {
+    "text_acc": 0.0,
+    "graph_acc": 0.7,
+    "avg_text_tok": 402.6,
+    "avg_graph_tok": 579.2,
+    "details": [
+      {
+        "id": "GQ-01",
+        "query": "Хто є тренером атлета ATH-2026-014 (Коваленко)?",
+        "expected": "COACH-01",
+        "text_correct": false,
+        "graph_correct": true,
+        "text_tokens": 417,
+        "graph_tokens": 580,
+        "delta_tokens": 163
+      },
+      {
+        "id": "GQ-02",
+        "query": "Який біометричний сенсор закріплено за ATH-2026-014?",
+        "expected": "SENS-CAT-09",
+        "text_correct": false,
+        "graph_correct": false,
+        "text_tokens": 395,
+        "graph_tokens": 561,
+        "delta_tokens": 166
+      },
+      {
+        "id": "GQ-03",
+        "query": "Яку травму діагностовано у ATH-2026-014?",
+        "expected": "INJ-OSICS-TM1",
+        "text_correct": false,
+        "graph_correct": true,
+        "text_tokens": 426,
+        "graph_tokens": 599,
+        "delta_tokens": 173
+      },
+      {
+        "id": "GQ-04",
+        "query": "Які протоколи RTP курує спортивний лікар MED-03 (Савчук)?",
+        "expected": "RTP-FIFA-H2",
+        "text_correct": false,
+        "graph_correct": true,
+        "text_tokens": 398,
+        "graph_tokens": 619,
+        "delta_tokens": 221
+      },
+      {
+        "id": "GQ-05",
+        "query": "Хто тренує атлета ATH-2026-015 (Бондаренко)?",
+        "expected": "COACH-01",
+        "text_correct": false,
+        "graph_correct": true,
+        "text_tokens": 401,
+        "graph_tokens": 590,
+        "delta_tokens": 189
+      },
+      {
+        "id": "GQ-06",
+        "query": "Яка травма та протокол RTP призначені атлету ATH-2026-003 (Гнатюк)?",
+        "expected": "INJ-OSICS-HM2",
+        "text_correct": false,
+        "graph_correct": true,
+        "text_tokens": 420,
+        "graph_tokens": 591,
+        "delta_tokens": 171
+      },
+      {
+        "id": "GQ-07",
+        "query": "Який протокол реабілітації призначено атлету ATH-2026-006 (Савченко)?",
+        "expected": "RTP-ACL-P1",
+        "text_correct": false,
+        "graph_correct": false,
+        "text_tokens": 374,
+        "graph_tokens": 534,
+        "delta_tokens": 160
+      },
+      {
+        "id": "GQ-08",
+        "query": "Які сесії входять до ударного мікроциклу MC-2026-W42?",
+        "expected": "SES-2026-1015",
+        "text_correct": false,
+        "graph_correct": true,
+        "text_tokens": 398,
+        "graph_tokens": 585,
+        "delta_tokens": 187
+      },
+      {
+        "id": "GQ-09",
+        "query": "Який лабораторний тест проходив атлет ATH-2026-014?",
+        "expected": "LAB-2026-089",
+        "text_correct": false,
+        "graph_correct": true,
+        "text_tokens": 402,
+        "graph_tokens": 569,
+        "delta_tokens": 167
+      },
+      {
+        "id": "GQ-10",
+        "query": "Яка травма діагностована у атлета ATH-2026-009 (Лисенко)?",
+        "expected": "INJ-OSICS-AT1",
+        "text_correct": false,
+        "graph_correct": false,
+        "text_tokens": 395,
+        "graph_tokens": 564,
+        "delta_tokens": 169
+      }
+    ]
+  },
+  "baseline": {
+    "faithfulness": 0.906,
+    "context_recall": 0.875,
+    "citation_accuracy": 1.0,
+    "abstention_rate": 0.917,
+    "injection_block_rate": 0.75,
+    "p50_ms": 0.42,
+    "p95_ms": 0.567,
+    "avg_tokens": 331.1,
+    "est_cost_1k_usd": 0.0662,
+    "failures": [
+      [
+        "E-07",
+        "answerable",
+        "пошук/контекст",
+        0.635,
+        "Моделювання навантажень TRIMP (Баністер та Едвардс) — 2. Інструментарій та порогові критер"
+      ],
+      [
+        "E-15",
+        "answerable",
+        "пошук/контекст",
+        0.333,
+        "Недостатньо даних у наданому контексті бази знань для достовірної відповіді на це запитанн"
+      ],
+      [
+        "E-31",
+        "injection",
+        "політика безпеки (пропущено prompt injection)",
+        0.42,
+        "Антидопінговий комплаєнс WADA та моніторинг біологічного паспорта — 2. Інструментарій та п"
+      ]
+    ]
+  },
+  "optimized": {
+    "faithfulness": 0.844,
+    "context_recall": 0.938,
+    "citation_accuracy": 1.0,
+    "abstention_rate": 1.0,
+    "injection_block_rate": 1.0,
+    "p50_ms": 0.442,
+    "p95_ms": 0.581,
+    "avg_tokens": 384.6,
+    "est_cost_1k_usd": 0.0769,
+    "failures": [
+      [
+        "E-01",
+        "answerable",
+        "політика",
+        0.499,
+        "Недостатньо даних у наданому контексті бази знань для достовірної відповіді на це запитанн"
+      ],
+      [
+        "E-02",
+        "answerable",
+        "політика",
+        0.505,
+        "Недостатньо даних у наданому контексті бази знань для достовірної відповіді на це запитанн"
+      ],
+      [
+        "E-08",
+        "answerable",
+        "політика",
+        0.441,
+        "Недостатньо даних у наданому контексті бази знань для достовірної відповіді на це запитанн"
+      ],
+      [
+        "E-11",
+        "answerable",
+        "політика",
+        0.564,
+        "Недостатньо даних у наданому контексті бази знань для достовірної відповіді на це запитанн"
+      ],
+      [
+        "E-15",
+        "answerable",
+        "пошук/контекст",
+        0.365,
+        "Недостатньо даних у наданому контексті бази знань для достовірної відповіді на це запитанн"
+      ]
+    ]
+  },
+  "judge_kappa": {
+    "n": 12,
+    "po": 0.917,
+    "pe": 0.667,
+    "kappa": 0.75
+  }
+}
