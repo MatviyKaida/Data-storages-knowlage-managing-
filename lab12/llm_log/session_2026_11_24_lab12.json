@@ -1,0 +1,15 @@
+[
+  {
+    "session_id": "LLM-LAB12-01",
+    "timestamp": "2026-11-24T21:15:00+02:00",
+    "model": "gemini-2.5-pro",
+    "parameters": {
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "prompt_version": "v1.0-star-and-t2sql",
+    "prompt_summary": "Запропонуй 12 бізнес-питань та SQL-запити до зіркової схеми fact_training_load із семантичним шаром metrics.yml.",
+    "raw_output_summary": "Згенеровано 12 SQL-запитів; 9 виконано коректно (75.0%), у 3 зафіксовано помилки E1 (колонка), E2 (JOIN), E3 (DELETE).",
+    "human_decision": "Верифікація V2/V4: AST-валідатор заблокував E3; 9 еталонних запитів підтверджено, 3 помилки задокументовано."
+  }
+]

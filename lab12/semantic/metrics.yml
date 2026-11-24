@@ -1,0 +1,58 @@
+version: "1.0"
+review_date: "2026-11-24"
+metrics:
+  total_distance_km:
+    name: "Сумарна тренувальна дистанція"
+    definition: "Загальний обсяг подоланої дистанції в кілометрах за вибраним зрізом"
+    formula: "ROUND(SUM(f.total_distance_m) / 1000.0, 2)"
+    unit: "км"
+    additivity: "additive"
+    owner: "Кайда Матвій (Data Analytics Lead)"
+    sources: ["fact_training_load.total_distance_m"]
+    constraints: "total_distance_m > 0"
+    review_date: "2026-11-24"
+    status: "approved"
+  avg_acwr:
+    name: "Середній індекс навантаження ACWR"
+    definition: "Середнє відношення гострого (7д) до хронічного (28д) навантаження"
+    formula: "ROUND(AVG(f.acwr_value), 3)"
+    unit: "коеф."
+    additivity: "non-additive"
+    owner: "Мельник В.П. (Головний тренер)"
+    sources: ["fact_training_load.acwr_value"]
+    constraints: "acwr_value BETWEEN 0.5 AND 2.5"
+    review_date: "2026-11-24"
+    status: "approved"
+  overload_rate_pct:
+    name: "Частка сесій у зоні перевантаження"
+    definition: "Відсоток тренувальних сесій із критичним значенням ACWR > 1.30"
+    formula: "ROUND(100.0 * SUM(CASE WHEN f.acwr_value > 1.30 THEN 1 ELSE 0 END) / COUNT(*), 1)"
+    unit: "%"
+    additivity: "non-additive"
+    owner: "Савчук І.Р. (Спортивний лікар)"
+    sources: ["fact_training_load.acwr_value"]
+    constraints: "COUNT(*) > 0"
+    review_date: "2026-11-24"
+    status: "approved"
+  avg_readiness_pct:
+    name: "Середній індекс готовності"
+    definition: "Середня ранкова готовність атлетів (HRV + Wellness)"
+    formula: "ROUND(AVG(f.readiness_score_pct), 1)"
+    unit: "%"
+    additivity: "semi-additive"
+    owner: "Гриценко Н.П. (Лікар діагностики)"
+    sources: ["fact_training_load.readiness_score_pct"]
+    constraints: "readiness_score_pct BETWEEN 0 AND 100"
+    review_date: "2026-11-24"
+    status: "approved"
+  total_trimp:
+    name: "Сумарний тренувальний імпульс TRIMP"
+    definition: "Накопичене внутрішнє кардіонавантаження за період"
+    formula: "SUM(f.trimp_score)"
+    unit: "од. TRIMP"
+    additivity: "additive"
+    owner: "Кравчук С.О. (Тренер витривалості)"
+    sources: ["fact_training_load.trimp_score"]
+    constraints: "trimp_score > 0"
+    review_date: "2026-11-24"
+    status: "approved"

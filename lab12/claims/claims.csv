@@ -1,0 +1,11 @@
+id,claim_text,claim_type,source,verification_level,status,reviewer_comment
+CL-01,Зіркова схема містить 5 вимірів (вкл. dim_taxonomy з IRI) та 1200 рядків факту з 0 сиріт.,факт,sql/ddl.sql + docs/dq_report.md,V2,verified,Перевірено LEFT JOIN по всіх 5 зовнішніх ключах.
+CL-02,Усі 6 перевірок якості даних (NOT NULL, унікальність, діапазони ACWR/Readiness/RPE/HSR) пройшли з 0 порушень.,факт,docs/dq_report.md,V2,verified,Дані збережено у 6 Parquet-файлах (PyArrow 26.0.0).
+CL-03,Результати OLAP Q1 (ROLLUP) та Q3 (SLICE Shock) на 100% збігаються з незалежним обчисленням у pandas.,факт,docs/olap_results.md,V4,verified,Q1_match=True, Q3_match=True.
+CL-04,Семантичний шар semantic/metrics.yml (5 метрик) генерує SQL, узгоджений із прямими OLAP-запитами.,правило,semantic/compiler.py,V4,verified,Перевірено на 2 питаннях (100% збіг).
+CL-05,У фазі Shock найвища частка перевантажень ACWR > 1.30 спостерігається в групі Мельника В.П. (73.0%).,факт,OLAP Q3 + dashboard.png,V4,verified,63 сесії, avg_acwr = 1.415.
+CL-06,Міру acwr_value можна підсумовувати (SUM) по тижнях як адитивну метрику.,гіпотеза,Поширена помилка моделювання,V2,rejected,Відхилено: ACWR — неадитивне відношення; агрегується лише через AVG або перерахунок чисельника/знаменника.
+CL-07,Конвеєр Text-to-SQL із AST-перевіркою, read-only, LIMIT 50 і тайм-аутом досягає 75.0% точності (9/12) та 100% безпеки.,факт,tests/t2sql.jsonl,V4,verified,Спробу DELETE (T2S-12) заблоковано AST.
+CL-08,Колонка resting_hr_bpm присутня в таблиці fact_training_load.,гіпотеза,Сирий вихід LLM (T2S-10),V2,rejected,Відхилено парсером SQL: у факті є rmssd_morning_ms, а не resting_hr_bpm.
+CL-09,Вимір dim_athlete підтримує історичність змін тренера/спеціалізації через SCD Type 2.,правило,docs/star_design.md,V2,verified,Поля valid_from, valid_to, is_current наявні в DDL і Parquet.
+CL-10,Аналітична панель із 4 візуалізацій підтверджує зворотну залежність готовності від ACWR.,факт,dashboard/dashboard.png,V4,verified,Чітке падіння readiness при ACWR > 1.30.
