@@ -1,0 +1,99 @@
+{
+  "scenarios_v1": {
+    "pass_rate": 0.5,
+    "passed": 5,
+    "total": 10,
+    "avg_steps": 4,
+    "avg_cost_usd": 0.0008,
+    "fails": [
+      [
+        "S-04",
+        "success",
+        [
+          "search_docs"
+        ],
+        "Регламент: Індекс гострого та хронічного навантаження ACWR в AMS — 2. Інструмент"
+      ],
+      [
+        "S-06",
+        "abstain",
+        [
+          "search_docs"
+        ],
+        "Регламент: Кардіоінтервалометрія (HRV) та ранковий моніторинг rMSSD — 3. Практич"
+      ],
+      [
+        "S-08",
+        "abstain",
+        [
+          "search_docs"
+        ],
+        "Регламент: Кардіоінтервалометрія (HRV) та ранковий моніторинг rMSSD — 1. Загальн"
+      ],
+      [
+        "S-09",
+        "conflict",
+        [
+          "search_docs"
+        ],
+        "Регламент: Індекс гострого та хронічного навантаження ACWR в AMS — 1. Загальні п"
+      ],
+      [
+        "S-10",
+        "conflict",
+        [
+          "search_docs"
+        ],
+        "Регламент: Біохімічна діагностика крові: креатинкіназа (КФК) та кортизол — 1. За"
+      ]
+    ]
+  },
+  "scenarios_v2": {
+    "pass_rate": 1.0,
+    "passed": 10,
+    "total": 10,
+    "avg_steps": 4.1,
+    "avg_cost_usd": 0.0008,
+    "fails": []
+  },
+  "attacks_before": 0,
+  "attacks_after": 6,
+  "hitl": [
+    {
+      "fact_id": "PF-01",
+      "entity": "SENS-CAT-01",
+      "field": "sensor_alias",
+      "proposed_value": "Catapult S7 #01",
+      "source": "Hardware_Registry",
+      "risk_level": "low",
+      "status": "AUTO_APPROVED",
+      "reviewer": "auto_policy",
+      "approval_time_min": 0.0,
+      "timestamp": "2026-11-24T22:55:00+02:00"
+    },
+    {
+      "fact_id": "PF-02",
+      "entity": "MC-2026-W42",
+      "field": "planned_trimp_limit",
+      "proposed_value": 640,
+      "source": "AMS_Planner_v2",
+      "risk_level": "medium",
+      "status": "HUMAN_APPROVED",
+      "reviewer": "Мельник В.П.",
+      "approval_time_min": 12.5,
+      "timestamp": "2026-11-24T22:55:00+02:00"
+    },
+    {
+      "fact_id": "PF-03",
+      "entity": "RTP-ACL-P1",
+      "field": "lsi_min_pct",
+      "proposed_value": 75,
+      "source": "Unverified_Blog_Draft",
+      "risk_level": "high",
+      "status": "HUMAN_REJECTED",
+      "reviewer": "Савчук І.Р.",
+      "approval_time_min": 18.0,
+      "timestamp": "2026-11-24T22:55:00+02:00"
+    }
+  ]
+}

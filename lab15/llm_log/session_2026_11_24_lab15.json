@@ -1,0 +1,15 @@
+[
+  {
+    "session_id": "LLM-LAB15-01",
+    "timestamp": "2026-11-24T23:00:00+02:00",
+    "model": "gemini-2.5-pro (агент) + gemini-2.5-flash (red team)",
+    "parameters": {
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "prompt_version": "agent_v2.0",
+    "prompt_summary": "Згенеруй 6 сценаріїв red-team атак на агента (injection, write, RBAC leak, loop, tool poisoning) та перевір траєкторії 10 сценаріїв.",
+    "raw_output_summary": "Сформовано 6 атак різних типів; до захисту пробито 6/6, після впровадження agent/security.py заблоковано 6/6 (100%).",
+    "human_decision": "Верифікація V2/V3/V4: усі 10 сценаріїв і 6 атак перевірено наживо; HITL-відхилення PF-03 підтверджено лікарем."
+  }
+]

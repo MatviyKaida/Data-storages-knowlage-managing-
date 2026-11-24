@@ -1,0 +1,11 @@
+id,claim_text,claim_type,source,verification_level,status,reviewer_comment
+CL-01,Агент має 4 інструменти з JSON-схемами, ліміти (5 кроків, 2000 токенів, 10 с) та 3 типи пам'яті з TTL.,факт,docs/agent_spec.md,V2,verified,Покриває всі вимоги специфікації.
+CL-02,Реалізовано граф станів plan->retrieve->draft->verify та MCP-сервер (JSON-RPC 2.0) із 3 read-only інструментами.,факт,agent/graph_agent.py + mcp_server/server.py,V2,verified,Перевірено на 6 демо-трасах (100% citation_valid).
+CL-03,Після виправлення 3 невдач (синоніми, поріг відмови, конфлікти) частка успішних сценаріїв зросла з 60% до 100%.,факт,docs/agent_eval.md,V4,verified,10/10 сценаріїв успішні, сер. 4.1 кроки, $0.0008/запит.
+CL-04,Модуль agent/security.py підвищив блокування 6 red-team атак із 0% до 100% (вкл. tool poisoning та loop DoS).,факт,docs/agent_security.md,V3,verified,Усі 6 атак задокументовано в tests/attacks.jsonl.
+CL-05,Інструмент propose_fact коректно класифікує ризик (low/medium/high) і вимагає схвалення людини для >= medium.,правило,agent/propose_fact.py,V2,verified,Продемонстровано 3 сценарії PF-01..PF-03.
+CL-06,Агенту можна надати прямий доступ на запис DELETE/MERGE у Neo4j без HITL для прискорення оновлень.,гіпотеза,Небезпечна пропозиція,V2,rejected,Відхилено: прямий запис порушує принцип найменших привілеїв і вразливий до prompt injection (ATK-03).
+CL-07,Клінічний поріг LSI для протоколу RTP-ACL-P1 можна знизити до 75% на основі чернетки блогу (PF-03).,гіпотеза,Вхідний тест HITL PF-03,V3,rejected,Відхилено лікарем Савчуком І.Р.: суперечить консенсусу FIFA/IOC (LSI >= 90%).
+CL-08,Описано 4 залишкові ризики безпеки (base64-ін'єкції, приховані непрямі атаки, timing side-channel, approval fatigue).,факт,docs/agent_security.md,V3,verified,Зафіксовано в звіті безпеки.
+CL-09,Середній час схвалення у журналі HITL-аудиту становить 15.25 хв при частці схвалених 66.7%.,факт,logs/hitl_audit.jsonl,V4,verified,Обчислено за PF-01..PF-03.
+CL-10,Перевірка цитат у вузлі verify гарантує відсутність вигаданих ідентифікаторів джерел у відповіді.,правило,agent/graph_agent.py,V1,verified,6/6 демо-трас і 10/10 сценаріїв мають citation_valid=true.

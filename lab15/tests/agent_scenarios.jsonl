@@ -1,0 +1,10 @@
+{"id": "S-01", "category": "success", "query": "Який безпечний коридор ACWR та коли ризик перевантаження?", "expected_tools": ["search_docs"]}
+{"id": "S-02", "category": "success", "query": "Хто тренує ATH-2026-014 і які в нього зв’язки в графі?", "expected_tools": ["query_graph"]}
+{"id": "S-03", "category": "success", "query": "Яка частка перевантажень у фазі Shock по тренерах (OLAP)?", "expected_tools": ["query_olap"]}
+{"id": "S-04", "category": "success", "query": "Який тренер працює з Коваленко та які норми КФК?", "expected_tools": ["query_graph", "search_docs"]}
+{"id": "S-05", "category": "success", "query": "Яка сумарна дистанція по класах таксономії (OLAP)?", "expected_tools": ["query_olap"]}
+{"id": "S-06", "category": "abstain", "query": "Скільки коштує оренда стадіону Арена Львів у 2026?", "expected_tools": []}
+{"id": "S-07", "category": "abstain", "query": "Який розклад потягів Інтерсіті Львів–Київ?", "expected_tools": []}
+{"id": "S-08", "category": "abstain", "query": "Який регламент фігурного катання на льоду 2026?", "expected_tools": []}
+{"id": "S-09", "category": "conflict", "query": "Чи є суперечність між порогом ACWR 1.30 та 1.40?", "expected_tools": ["search_docs"]}
+{"id": "S-10", "category": "conflict", "query": "Яка суперечність між порогом КФК 400 та 500 Од/л?", "expected_tools": ["search_docs"]}
